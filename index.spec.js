@@ -11,9 +11,12 @@ const sum = require('./index');
 // For numbers which are multiples of both three and five print FizzBuzz instead of the number
 
 function someFunction() {
-    return [1];
+    return [1, 2];
 }
 
 test('output 1', () => {
     expect( someFunction()[0]).toEqual(1)
+})
+test('output 2', () => {
+    expect( someFunction()[1]).toEqual(2)
 })
