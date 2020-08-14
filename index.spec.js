@@ -11,17 +11,17 @@ const sum = require('./index');
 // For numbers which are multiples of both three and five print FizzBuzz instead of the number
 
 function someFunction() {
-  let array = [];
+  const array = [];
   for (let i = 1; i <= 100; i++) {
+    let value = i;
     if (i % 3 === 0 && i % 5 === 0) {
-      array.push("FizzBuzz");
+      value = "FizzBuzz";
     } else if (i % 3 === 0) {
-      array.push("Fizz");
+      value = "Fizz";
     } else if (i % 5 === 0) {
-      array.push("Buzz");
-    } else {
-      array.push(i);
+      value = "Buzz";
     }
+    array.push(value);
   }
   return array;
 }
