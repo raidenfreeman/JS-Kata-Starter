@@ -16,6 +16,7 @@ function someFunction() {
     let value = "";
     value += (i % 3 === 0) ? "Fizz" : "";
     value += (i % 5 === 0) ? "Buzz" : "";
+    value += (i % 7 === 0) ? "Bang" : "";
     array.push(value || i);
   }
   return array;
@@ -41,6 +42,15 @@ test('output FizzBuzz for 15', () => {
 })
 test('output FizzBuzz for 30', () => {
   expect(someFunction()[29]).toEqual("FizzBuzz")
+})
+test('output Bang for 7', () => {
+  expect(someFunction()[6]).toEqual("Bang")
+})
+test('output FizzBang for 21', () => {
+  expect(someFunction()[20]).toEqual("FizzBang")
+})
+test('output BuzzBang for 35', () => {
+  expect(someFunction()[34]).toEqual("BuzzBang")
 })
 
 
