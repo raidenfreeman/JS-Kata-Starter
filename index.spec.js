@@ -14,7 +14,7 @@ function someFunction() {
   const array = [];
   for (let i = 1; i <= 100; i++) {
     let value = "";
-    value += (i % 3 === 0 || i === 13) ? "Fizz" : "";
+    value += (i % 3 === 0 || i.toString().includes("3")) ? "Fizz" : "";
     value += (i % 5 === 0) ? "Buzz" : "";
     value += (i % 7 === 0) ? "Bang" : "";
     array.push(value || i);
@@ -50,10 +50,13 @@ test('output FizzBang for 21', () => {
   expect(someFunction()[20]).toEqual("FizzBang")
 })
 test('output BuzzBang for 35', () => {
-  expect(someFunction()[34]).toEqual("BuzzBang")
+  expect(someFunction()[34]).toEqual("FizzBuzzBang")
 })
 test('output Fizz for 13', () => {
   expect(someFunction()[12]).toEqual("Fizz")
+})
+test('output Fizz for 37', () => {
+  expect(someFunction()[36]).toEqual("Fizz")
 })
 
 
