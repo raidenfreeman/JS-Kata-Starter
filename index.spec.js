@@ -14,3 +14,11 @@ const sum = require('./index');
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
 });
+
+function someFunction() {
+    return 1;
+}
+
+test('output 1', () => {
+    expect( someFunction()).toEqual(1)
+})
