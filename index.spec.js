@@ -12,15 +12,27 @@ const sum = require('./index');
 
 function someFunction() {
     let array = [];
-    for (let i = 1; i<=100; i++){
-        array.push(i);
+    for (let i = 1; i <= 100; i++) {
+        if(i%3 === 0) {
+            array.push("Fizz");
+        } else {
+            array.push(i);
+        }
     }
     return array;
 }
 
 test('output 1', () => {
-    expect( someFunction()[0]).toEqual(1)
+    expect(someFunction()[0]).toEqual(1)
 })
 test('output 2', () => {
-    expect( someFunction()[1]).toEqual(2)
+    expect(someFunction()[1]).toEqual(2)
 })
+test('output Fizz for 3', () => {
+    expect(someFunction()[2]).toEqual("Fizz")
+})
+test('output Fizz for 6', () => {
+    expect(someFunction()[5]).toEqual("Fizz")
+})
+
+
