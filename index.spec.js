@@ -10,15 +10,10 @@ const sum = require('./index');
 // For the multiples of five print Buzz instead of the number
 // For numbers which are multiples of both three and five print FizzBuzz instead of the number
 
-
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
-});
-
 function someFunction() {
-    return 1;
+    return [1];
 }
 
 test('output 1', () => {
-    expect( someFunction()).toEqual(1)
+    expect( someFunction()[0]).toEqual(1)
 })
