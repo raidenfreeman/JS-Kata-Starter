@@ -13,7 +13,7 @@ const sum = require('./index');
 function someFunction() {
   const array = [];
   for (let i = 1; i <= 100; i++) {
-    let value = i;
+    let value = "";
     if (i % 3 === 0 && i % 5 === 0) {
       value = "FizzBuzz";
     } else if (i % 3 === 0) {
@@ -21,7 +21,7 @@ function someFunction() {
     } else if (i % 5 === 0) {
       value = "Buzz";
     }
-    array.push(value);
+    array.push(value || i);
   }
   return array;
 }
