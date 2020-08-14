@@ -11,7 +11,11 @@ const sum = require('./index');
 // For numbers which are multiples of both three and five print FizzBuzz instead of the number
 
 function someFunction() {
-    return [1, 2];
+    let array = [];
+    for (let i = 1; i<=100; i++){
+        array.push(i);
+    }
+    return array;
 }
 
 test('output 1', () => {
