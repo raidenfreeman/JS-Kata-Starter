@@ -1,15 +1,16 @@
 function purchaseBook(basket) {
+  const undiscountedTotal = basket.length * 8;
   if (basket[0] === 1 && basket[1] === 1 && basket[2] === 1) {
-    return 0.9 * (basket.length * 8);
+    return 0.9 * undiscountedTotal;
   }
   if (basket[0] === 1 && basket[1] === 1) {
-    return 0.95 * (basket.length * 8);
+    return 0.95 * undiscountedTotal;
   }
   if (basket[1] === 1) {
-    return 8;
+    return 1 * 8;
   }
   if (basket[0] === 1 && basket[1] === 2) {
-    return 0.95 * (basket.length * 8) + 8;
+    return 0.95 * undiscountedTotal + 8;
   }
   return basket[0] * 8;
 }
