@@ -1,17 +1,17 @@
-function purchaseBook(number) {
-  if (number[0] === 1 && number[1] === 1) {
-    if( number[2] === 1) {
-      return 21.6
-    }
+function purchaseBook(basket) {
+  if (basket[0] === 1 && basket[1] === 1 && basket[2] === 1) {
+    return 21.6;
+  }
+  if (basket[0] === 1 && basket[1] === 1) {
     return 15.2;
   }
-  if (number[0] === 1 && number[1] === 2) {
-    return 23.2;
-  }
-  if (number[1] === 1) {
+  if (basket[1] === 1) {
     return 8;
   }
-  return number[0] * 8;
+  if (basket[0] === 1 && basket[1] === 2) {
+    return 23.2;
+  }
+  return basket[0] * 8;
 }
 
 describe("harry potter books", () => {
