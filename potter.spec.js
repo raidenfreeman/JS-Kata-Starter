@@ -9,7 +9,7 @@ function purchaseBook(basket) {
     return 8;
   }
   if (basket[0] === 1 && basket[1] === 2) {
-    return 23.2;
+    return 0.95 * (basket.length * 8) + 8;
   }
   return basket[0] * 8;
 }
