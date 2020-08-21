@@ -1,10 +1,17 @@
 function purchaseBook(basket) {
   const undiscountedTotal = basket.length * 8;
+  const key = `${basket[0]},${basket[1]},${basket[2]}`;
+  const map = {
+    "1,1,1": 0.9,
+    "1,1,undefined": 0.95,
+    "undefined,1,undefined": 1
+};
+  const res =  map[key] * undiscountedTotal;
   if (basket[0] === 1 && basket[1] === 1 && basket[2] === 1) {
-    return 0.9 * undiscountedTotal;
+    return  res;
   }
   if (basket[0] === 1 && basket[1] === 1) {
-    return 0.95 * undiscountedTotal;
+    return res;
   }
   if (basket[1] === 1) {
     return 1 * 8;
