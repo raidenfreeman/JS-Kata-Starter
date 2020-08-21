@@ -4,7 +4,7 @@ function purchaseBook(number) {
   } else if (number === 2) {
     return number * 8;
   }
-  return 8;
+  return number * 8;
 }
 
 describe("harry potter books", () => {
