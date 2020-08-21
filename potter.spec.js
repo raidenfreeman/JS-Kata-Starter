@@ -2,7 +2,7 @@ function purchaseBook(number) {
   if (number === 0) {
     return number;
   } else if (number === 2) {
-    return 16;
+    return number * 8;
   }
   return 8;
 }
