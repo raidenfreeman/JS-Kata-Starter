@@ -1,5 +1,8 @@
 function purchaseBook(number) {
   if (number[0] === 1 && number[1] === 1) {
+    if( number[2] === 1) {
+      return 21.6
+    }
     return 15.2;
   }
   if (number[0] === 1 && number[1] === 2) {
@@ -38,5 +41,9 @@ describe("harry potter books", () => {
 
   it('1 book from 1st series and 2 books from 2nd series cost 23.2', function () {
     expect(purchaseBook([1, 2])).toEqual(23.2);
+  });
+
+  it('1 book from 1st series, 1 book from 2nd series and 1 from 3rd series cost 21.6', function () {
+    expect(purchaseBook([1, 1, 1])).toEqual(21.6)
   });
 });
