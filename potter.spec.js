@@ -1,6 +1,6 @@
 function purchaseBook(basket) {
   if (basket[0] === 1 && basket[1] === 1 && basket[2] === 1) {
-    return 21.6;
+    return 0.9 * (basket.length * 8);
   }
   if (basket[0] === 1 && basket[1] === 1) {
     return 15.2;
