@@ -1,9 +1,4 @@
 function purchaseBook(number) {
-  if (number === 0) {
-    return number * 8
-  } else if (number === 2) {
-    return number * 8;
-  }
   return number * 8;
 }
 
