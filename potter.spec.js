@@ -10,7 +10,7 @@ function purchaseBook(basket) {
   if (key === "1,1,1") {
     return  res;
   }
-  if (basket[0] === 1 && basket[1] === 1) {
+  if (key === "1,1,undefined") {
     return res;
   }
   if (basket[1] === 1) {
