@@ -9,14 +9,8 @@ function purchaseBook(basket) {
     "0,1,undefined": 1
 };
   const res =  map[key] * undiscountedTotal;
-  if (key === "1,1,1") {
+  if (key === "1,1,1" || key === "1,1,undefined" || key === "0,1,undefined") {
     return  res;
-  }
-  if (key === "1,1,undefined") {
-    return res;
-  }
-  if (key === "0,1,undefined") {
-    return res;
   }
   if (basket[0] === 1 && basket[1] === 2) {
     return 0.95 * undiscountedTotal + 8;
