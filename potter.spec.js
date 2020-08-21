@@ -1,5 +1,6 @@
 function purchaseBook(basket) {
-  const undiscountedTotal = basket.length * 8;
+  const basketLength = basket.filter(item => !!item).length;
+  const undiscountedTotal = basketLength * 8;
   const key = `${basket[0]},${basket[1]},${basket[2]}`;
   const map = {
     "1,1,1": 0.9,
@@ -15,7 +16,7 @@ function purchaseBook(basket) {
     return res;
   }
   if (key === "0,1,undefined") {
-    return 1 * 8;
+    return res;
   }
   if (basket[0] === 1 && basket[1] === 2) {
     return 0.95 * undiscountedTotal + 8;
